@@ -90,7 +90,7 @@
             </v-row>
             <v-row>
               <v-col align-self="center" align="middle">
-                <v-dialog max-width="600">
+                <v-dialog max-width="400">
                   <template v-slot:activator="{ on, attrs }">
                     <v-btn
                       v-bind="attrs"
@@ -131,7 +131,7 @@
                                 {{downloadInfo.content}}
                               <p>
                               <div v-if="downloadInfo.type === 'url'">
-                                <a download :href="downloadInfo.content">点击下载文件</a>
+                                <a :href="downloadInfo.content" download>点击下载文件</a>
                               </div>
                             </v-card-text>
                             <v-card-actions>
