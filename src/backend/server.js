@@ -63,8 +63,10 @@ function getCosToken() {
 }
 
 exports.main = async (event, context) => {
-  const cmd = event.cmd;
-  const content = event.content;
+  const body = JSON.parse(event.body);
+  const cmd = body.cmd;
+  const content = body.content;
+  const type = body.type;
 
   if (cmd === 'getToken') {
     const res = await getCosToken();
@@ -73,7 +75,8 @@ exports.main = async (event, context) => {
     const code = (new Date()).getTime()
     const res = await db.collection('res-store').add({
       code,
-      content
+      content,
+      type
     })
     return {
       res,
@@ -84,7 +87,7 @@ exports.main = async (event, context) => {
       code: _.eq(Number(content))
     }).get()
     return {
-      url: res.data.map(d => d.content)
+      url: res.data.map(d => ({ content: d.content, type: d.type }))
     }
   }
 };

@@ -6,6 +6,12 @@
   </v-app>
 </template>
 
+<style>
+::-webkit-scrollbar {
+  display: none;
+}
+</style>
+
 <script>
 import Main from './components/Main';
 
