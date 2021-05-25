@@ -73,7 +73,7 @@ exports.main = async (event, context) => {
     return res
   } else if (cmd === 'setData') {
     const code = (new Date()).getTime()
-    const res = await db.collection('res-store').add({
+    const res = await db.collection(process.env.tcbDB).add({
       code,
       content,
       type
@@ -83,7 +83,7 @@ exports.main = async (event, context) => {
       code
     }
   } else if (cmd === 'getData') {
-    const res = await db.collection('res-store').where({
+    const res = await db.collection(process.env.tcbDB).where({
       code: _.eq(Number(content))
     }).get()
     return {
