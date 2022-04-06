@@ -1,8 +1,8 @@
-## #2021 TCBC 云开发技术竞赛# - 快传助手 - 摸鱼第一名
+##  快传助手
 
 ## 作者简介
 
-zhutaohuang(黄铸韬)
+[zhutaohuang](https://github.com/ZTao-z)
 
 ## 作品介绍
 
@@ -44,6 +44,3 @@ zhutaohuang(黄铸韬)
 
 4. 文件资源存储（对象存储COS）：主要负责保存文件资源。
 
-## 作品体验
-
-[体验地址](http://file-transfer-2gp4f8q0ad4eda34-1252809026.tcloudbaseapp.com/file-transfer/index.html)
