@@ -196,7 +196,7 @@ export default {
         this.isUploading = true;
         const res = await window.axios({
           method: 'post',
-          url: 'https://file-transfer-2gp4f8q0ad4eda34-1252809026.ap-guangzhou.app.tcloudbase.com/cgi',
+          url: '', // 后台上传接口
           responseType: 'json',
           data: {
             type: 'text',
@@ -214,7 +214,7 @@ export default {
             // 异步获取临时密钥
             const res = await window.axios({
               method: 'post',
-              url: 'https://file-transfer-2gp4f8q0ad4eda34-1252809026.ap-guangzhou.app.tcloudbase.com/cgi',
+              url: '', // 后台cos接口
               responseType: 'json',
               data: {
                 cmd: 'getToken'
@@ -249,7 +249,7 @@ export default {
             // 传文本
             const res = await window.axios({
               method: 'post',
-              url: 'https://file-transfer-2gp4f8q0ad4eda34-1252809026.ap-guangzhou.app.tcloudbase.com/cgi',
+              url: '', // 后台上传接口
               responseType: 'json',
               data: {
                 type: 'url',
@@ -269,7 +269,7 @@ export default {
       this.isDownloading = true;
       const res = await window.axios({
         method: 'post',
-        url: 'https://file-transfer-2gp4f8q0ad4eda34-1252809026.ap-guangzhou.app.tcloudbase.com/cgi',
+        url: '', // 后台下载接口
         responseType: 'json',
         data: {
           cmd: 'getData',
